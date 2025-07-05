@@ -3,7 +3,7 @@ import input as inp
 
 class Debuger:
     def __init__(self):
-        self.enabled = False
+        self.enabled = True
 
 
         self.tweak_var = 0
