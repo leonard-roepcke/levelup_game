@@ -1,7 +1,13 @@
 import pygame
+import player as pl
+
+
 pygame.init()
 screen = pygame.display.set_mode((800,600))
 pygame.display.set_caption("Hallo Welt")
+clock = pygame.time.Clock()
+
+player_main = pl.Player(screen)
 
 running = True
 while running:
@@ -10,7 +16,8 @@ while running:
             running = False
 
     screen.fill((255,255,255))
+    
+    player_main.update()
 
-    pygame.draw.rect(screen, (0,0,0), (50,50,50,50))
-
+    clock.tick(60)
     pygame.display.flip()
