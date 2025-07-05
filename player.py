@@ -5,7 +5,6 @@ import debug
 import math
 debuger = debug.Debuger()
 #debuger.start_log()
-debuger.tweak_setup(0.1, 7.0)
 
 class Player():    
     def __init__(self, screen):
@@ -14,16 +13,13 @@ class Player():
         self.x_speed = 0
         self.y_speed = 0
         self.screen = screen
-        self.accleration = 1.0
+        self.accleration = 3.6
         self.friction = 0.54
         self.accleration_scaled = self.accleration
 
     def update(self):
         self.update_pos()
-        self.update_speed()
-        debuger.log("y_speed: ", self.y_speed)
-        debuger.log("y", self.y)
-        self.accleration = debuger.tweak()    
+        self.update_speed() 
 
     def update_pos(self):
         self.x += self.x_speed
