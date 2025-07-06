@@ -3,13 +3,13 @@ import input as inp
 import colors as color
 import debug
 import math
+from components import Transform
 debuger = debug.Debuger()
 #debuger.start_log()
 
 class Player():    
     def __init__(self, screen):
-        self.x = 100
-        self.y = 100
+        self.transform = Transform()
         self.x_speed = 0
         self.y_speed = 0
         self.screen = screen
